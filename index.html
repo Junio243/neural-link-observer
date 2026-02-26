@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEURAL-LINK OBSERVER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">⟪</span>
+                <h1>NEURAL-LINK OBSERVER</h1>
+                <span class="logo-icon">⟫</span>
+            </div>
+            <div class="status-bar">
+                <span class="status-item">STATUS: <span class="status-value active">ONLINE</span></span>
+                <span class="status-item">UPTIME: <span class="uptime" id="uptime">00:00:00</span></span>
+                <span class="status-item">NEURAL SYNC: <span class="status-value">99.7%</span></span>
+            </div>
+        </header>
+
+        <!-- MAIN GRID -->
+        <main class="grid-container">
+            <!-- PANEL 1: NEURAL ACTIVITY GRAPH -->
+            <section class="panel neural-panel">
+                <div class="panel-header">
+                    <h2>⦿ NEURAL ACTIVITY</h2>
+                    <div class="panel-controls">
+                        <button class="ctrl-btn">▬</button>
+                        <button class="ctrl-btn">□</button>
+                        <button class="ctrl-btn">×</button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <canvas id="neuralCanvas" class="neural-canvas"></canvas>
+                    <div class="neural-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">CURRENT</span>
+                            <span class="stat-value" id="current-activity">0.0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">AVERAGE</span>
+                            <span class="stat-value" id="avg-activity">0.0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">PEAK</span>
+                            <span class="stat-value" id="peak-activity">0.0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL 2: COMMAND TERMINAL -->
+            <section class="panel terminal-panel">
+                <div class="panel-header">
+                    <h2>⬡ COMMAND TERMINAL</h2>
+                    <div class="panel-controls">
+                        <button class="ctrl-btn">▬</button>
+                        <button class="ctrl-btn">□</button>
+                        <button class="ctrl-btn">×</button>
+                    </div>
+                </div>
+                <div class="panel-content terminal-content">
+                    <div class="terminal-output" id="terminal-output">
+                        <div class="terminal-line"><span class="prompt">$</span> NEURAL-LINK OBSERVER v2.7.3 [INITIALIZED]</div>
+                        <div class="terminal-line"><span class="prompt">$</span> Type 'help' for available commands</div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="prompt">$</span>
+                        <input type="text" id="terminal-input" class="terminal-input" placeholder="Enter command..." autocomplete="off">
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL 3: MATRIX LOG FEED -->
+            <section class="panel matrix-panel">
+                <div class="panel-header">
+                    <h2>◆ MATRIX LOG FEED</h2>
+                    <div class="panel-controls">
+                        <button class="ctrl-btn">▬</button>
+                        <button class="ctrl-btn">□</button>
+                        <button class="ctrl-btn">×</button>
+                    </div>
+                </div>
+                <div class="panel-content matrix-content">
+                    <div class="matrix-feed" id="matrix-feed">
+                        <!-- Generated dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL 4: SYSTEM METRICS -->
+            <section class="panel metrics-panel">
+                <div class="panel-header">
+                    <h2>▲ SYSTEM METRICS</h2>
+                    <div class="panel-controls">
+                        <button class="ctrl-btn">▬</button>
+                        <button class="ctrl-btn">□</button>
+                        <button class="ctrl-btn">×</button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-label">CPU USAGE</div>
+                            <div class="metric-bar">
+                                <div class="metric-fill" id="cpu-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="metric-value" id="cpu-value">0%</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">MEMORY</div>
+                            <div class="metric-bar">
+                                <div class="metric-fill" id="memory-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="metric-value" id="memory-value">0%</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">LATENCY</div>
+                            <div class="metric-bar">
+                                <div class="metric-fill" id="latency-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="metric-value" id="latency-value">0ms</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">THROUGHPUT</div>
+                            <div class="metric-bar">
+                                <div class="metric-fill" id="throughput-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="metric-value" id="throughput-value">0 Mbps</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-info">
+                <span>NEURAL-LINK OBSERVER © 2026 | AI Monitoring Division</span>
+            </div>
+            <div class="footer-scanline"></div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
