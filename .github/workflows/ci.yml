@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check entry files
+        run: |
+          test -f index.html && echo "index.html OK"
+          test -f script.js && node --check script.js && echo "script.js OK"
+          test -f styles.css && echo "styles.css OK"

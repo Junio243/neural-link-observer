@@ -6,6 +6,11 @@
 ![Version](https://img.shields.io/badge/Version-2.7.3-blue)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Code Size](https://img.shields.io/badge/Size-~50KB-green)
+[![CI](https://github.com/Junio243/neural-link-observer/actions/workflows/ci.yml/badge.svg)](https://github.com/Junio243/neural-link-observer/actions/workflows/ci.yml)
+
+## 📸 Screenshots
+
+> Prints em `docs/screenshots/` (`dashboard.png`, `terminal.png`).
 
 ## 🚀 Quick Start
 
